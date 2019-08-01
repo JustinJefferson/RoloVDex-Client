@@ -1,1 +1,13 @@
-<p>your-cards works!</p>
+<div *ngFor="let cardData of allCardData">
+  <div class="card">
+    <p>
+      NAME: {{ cardData.name }}<br>
+      JOB TITLE: {{ cardData.jobTitle }}<br>
+      COMPANY: {{ cardData.company }}<br>
+      ADDRESS: {{ cardData.addressLine1 }}<br>
+      CITY: {{ cardData.city }}<br>
+      STATE: {{ cardData.state }}<br>
+      ZIPCODE: {{ cardData.zipcode }}
+    </p>
+  </div>
+</div>

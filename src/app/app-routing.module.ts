@@ -10,7 +10,7 @@ import {HelpComponent} from './help/help.component';
 const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'yourcards', component: YourCardsComponent },
-  { path: 'sharedcards', component: SharedCardsComponent },
+  { path: 'collection', component: SharedCardsComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'help', component: HelpComponent }
 ];
