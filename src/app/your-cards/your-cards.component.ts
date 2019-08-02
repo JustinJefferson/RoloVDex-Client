@@ -5,7 +5,7 @@ import {CARDDATA} from '../mock-card-data';
 @Component({
   selector: 'app-your-cards',
   templateUrl: './your-cards.component.html',
-  styleUrls: ['./your-cards.component.css']
+  styleUrls: ['./your-cards.component.scss']
 })
 export class YourCardsComponent implements OnInit {
 

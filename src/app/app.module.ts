@@ -25,6 +25,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
