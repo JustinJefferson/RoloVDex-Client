@@ -1,5 +1,31 @@
-<a routerLink="/profile">Profile</a>
-<a routerLink="/yourcards">Your Cards</a>
-<a routerLink="/collection">Collection</a>
-<a routerLink="/settings">Settings</a>
-<a routerLink="/help">Help</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    RoloVDex
+  </a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show' : navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/yourcards">Your Cards</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/collection">Collection</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/settings">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/help">Help</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
