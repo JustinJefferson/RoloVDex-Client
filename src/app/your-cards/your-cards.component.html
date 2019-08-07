@@ -1,13 +1,33 @@
-<div *ngFor="let cardData of allCardData">
-  <div class="card">
-    <p>
-      NAME: {{ cardData.name }}<br>
-      JOB TITLE: {{ cardData.jobTitle }}<br>
-      COMPANY: {{ cardData.company }}<br>
-      ADDRESS: {{ cardData.addressLine1 }}<br>
-      CITY: {{ cardData.city }}<br>
-      STATE: {{ cardData.state }}<br>
-      ZIPCODE: {{ cardData.zipcode }}
-    </p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let cardData of allCardData" class="col-md-5 mb-4">
+      <div class="card">
+        <div class="view overlay">
+          <!--Card Image-->
+          <div *ngIf="cardData.imagePath != ''; then thenBlock else elseBlock"></div>
+
+          <ng-template #thenBlock><img src="{{ cardData.imagePath }}" class="card-img-top" alt=""></ng-template>
+          <ng-template #elseBlock><img src="https://showboatvideos.s3.us-east-2.amazonaws.com/rolovdex-image-placeholder.png" class="card-img-top" alt=""></ng-template>
+
+
+        </div>
+<!--        <div class="view overlay">-->
+<!--          <img src="" class="card-img-top" alt="">-->
+<!--        </div>-->
+        <div class="card-body">
+          <p class="card-text">
+            {{cardData.name}}: {{cardData.jobTitle}} <span *ngIf="cardData.company != ''">at {{cardData.company}}</span><br>
+            NAME: {{ cardData.name }}<br>
+            JOB TITLE: {{ cardData.jobTitle }}<br>
+            COMPANY: {{ cardData.company }}<br>
+            ADDRESS: {{ cardData.addressLine1 }}<br>
+            CITY: {{ cardData.city }}<br>
+            STATE: {{ cardData.state }}<br>
+            ZIPCODE: {{ cardData.zipcode }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
