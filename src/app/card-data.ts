@@ -1,6 +1,7 @@
+import { User } from './user';
+
 export class CardData {
   id: number;
-  userId: number;
   name: string;
   jobTitle: string;
   company: string;
@@ -10,4 +11,8 @@ export class CardData {
   state: string;
   zipcode: string;
   imagePath: string;
+  dateCreated: string;
+  dateUpdated: string;
+  owner: User;
+  users: User[];
 }
