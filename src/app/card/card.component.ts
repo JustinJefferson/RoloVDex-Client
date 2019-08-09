@@ -16,4 +16,8 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleDisplay() {
+    this.infoDisplay = !this.infoDisplay;
+  }
+
 }

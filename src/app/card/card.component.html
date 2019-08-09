@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="view overlay">
+  <div class="view overlay" (click)="toggleDisplay()">
     <!--Card Image-->
     <div *ngIf="cardData.imagePath != ''; then thenBlock else elseBlock"></div>
     <ng-template #thenBlock><img src="{{ cardData.imagePath }}" class="card-img-top" alt=""></ng-template>
@@ -7,18 +7,19 @@
 
   </div>
   <div *ngIf="infoDisplay == true" class="card-body">
-    <p class="card-text">
-      {{cardData.name}}: {{cardData.jobTitle}} <span *ngIf="cardData.company != ''">at {{cardData.company}}</span><br>
-      NAME: {{ cardData.name }}<br>
-      JOB TITLE: {{ cardData.jobTitle }}<br>
-      COMPANY: {{ cardData.company }}<br>
-      ADDRESS: {{ cardData.addressLine1 }}<br>
-      CITY: {{ cardData.city }}<br>
-      STATE: {{ cardData.state }}<br>
-      ZIPCODE: {{ cardData.zipcode }}
-    </p>
+    <h3 class="card-title text-center">{{cardData.name}}: {{cardData.jobTitle}} <span *ngIf="cardData.company != ''">at {{cardData.company}}</span></h3>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{cardData.name}}: {{cardData.jobTitle}} <span *ngIf="cardData.company != ''">at {{cardData.company}}</span></li>
+      <li class="list-group-item">NAME: {{ cardData.name }}</li>
+      <li class="list-group-item">JOB TITLE: {{ cardData.jobTitle }}</li>
+      <li class="list-group-item">COMPANY: {{ cardData.company }}</li>
+      <li class="list-group-item">ADDRESS: {{ cardData.addressLine1 }} {{ cardData. addressLine2 }}</li>
+      <li class="list-group-item">CITY: {{ cardData.city }}</li>
+      <li class="list-group-item">STATE: {{ cardData.state }}</li>
+      <li class="list-group-item">ZIPCODE: {{ cardData.zipcode }}</li>
+    </ul>
   </div>
-  <div class="card-footer">
+  <div class="card-footer text-muted text-right">
     <p>updated: {{ cardData.dateUpdated }}</p>
   </div>
 </div>

@@ -1,0 +1,8 @@
+<div class="container">
+  <h2 class="text-center">COLLECTION</h2>
+<!--  <div class="card-columns">-->
+    <div *ngFor="let cardData of user.yourCards">
+      <app-card [cardData]="cardData" [infoDisplay]="false"></app-card>
+    </div>
+<!--  </div>-->
+</div>

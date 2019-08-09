@@ -10,6 +10,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { HelpComponent } from './help/help.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CardComponent } from './card/card.component';
+import { CollectionComponent } from './collection/collection.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardComponent } from './card/card.component';
     SettingsComponent,
     HelpComponent,
     NavigationComponent,
-    CardComponent
+    CardComponent,
+    CollectionComponent
   ],
   imports: [
     BrowserModule,

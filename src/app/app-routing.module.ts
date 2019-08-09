@@ -5,14 +5,16 @@ import {YourCardsComponent} from './your-cards/your-cards.component';
 import {SharedCardsComponent} from './shared-cards/shared-cards.component';
 import {SettingsComponent} from './settings/settings.component';
 import {HelpComponent} from './help/help.component';
+import {CollectionComponent} from './collection/collection.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/profile', pathMatch: 'full'},
   { path: 'profile', component: ProfileComponent },
-  { path: 'yourcards', component: YourCardsComponent },
-  { path: 'collection', component: SharedCardsComponent },
+  { path: 'collection', component: CollectionComponent },
   { path: 'settings', component: SettingsComponent },
-  { path: 'help', component: HelpComponent }
+  { path: 'help', component: HelpComponent },
+  { path: '**', redirectTo: '/help', pathMatch: 'full'}
 ];
 
 @NgModule({
