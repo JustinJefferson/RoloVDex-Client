@@ -9,6 +9,7 @@ import { SharedCardsComponent } from './shared-cards/shared-cards.component';
 import { SettingsComponent } from './settings/settings.component';
 import { HelpComponent } from './help/help.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     SharedCardsComponent,
     SettingsComponent,
     HelpComponent,
-    NavigationComponent
+    NavigationComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="view overlay">
+    <!--Card Image-->
+    <div *ngIf="cardData.imagePath != ''; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock><img src="{{ cardData.imagePath }}" class="card-img-top" alt=""></ng-template>
+    <ng-template #elseBlock><img src="https://showboatvideos.s3.us-east-2.amazonaws.com/rolovdex-image-placeholder.png" class="card-img-top" alt=""></ng-template>
+
+  </div>
+  <div *ngIf="infoDisplay == true" class="card-body">
+    <p class="card-text">
+      {{cardData.name}}: {{cardData.jobTitle}} <span *ngIf="cardData.company != ''">at {{cardData.company}}</span><br>
+      NAME: {{ cardData.name }}<br>
+      JOB TITLE: {{ cardData.jobTitle }}<br>
+      COMPANY: {{ cardData.company }}<br>
+      ADDRESS: {{ cardData.addressLine1 }}<br>
+      CITY: {{ cardData.city }}<br>
+      STATE: {{ cardData.state }}<br>
+      ZIPCODE: {{ cardData.zipcode }}
+    </p>
+  </div>
+  <div class="card-footer">
+    <p>updated: {{ cardData.dateUpdated }}</p>
+  </div>
+</div>

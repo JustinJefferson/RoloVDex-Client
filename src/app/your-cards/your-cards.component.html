@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <app-card [cardData]="allCardData[0]" [infoDisplay]="true"></app-card>
     <div *ngFor="let cardData of allCardData" class="col-md-5 mb-4">
       <div class="card">
         <div class="view overlay">

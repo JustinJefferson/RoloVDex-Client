@@ -3,7 +3,6 @@ import {CardData} from './card-data';
 export const CARDDATA: CardData[] = [
   {
     id: 1,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: 'Guitar Center',
@@ -12,11 +11,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 2,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: 'Theater of the Living Arts',
@@ -25,11 +27,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 3,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: '',
@@ -38,11 +43,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 4,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: '',
@@ -51,11 +59,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 5,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: '',
@@ -64,11 +75,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 6,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: '',
@@ -77,11 +91,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 7,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: '',
@@ -90,11 +107,14 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   },
   {
     id: 8,
-    userId: 0,
     name: 'Bobert',
     jobTitle: 'Musician',
     company: '',
@@ -103,6 +123,10 @@ export const CARDDATA: CardData[] = [
     city: 'Washington',
     state: 'OH',
     zipcode: '99999',
-    imagePath: ''
+    imagePath: '',
+    dateCreated: 'Today',
+    dateUpdated: 'Today',
+    owner: null,
+    users: null
   }
 ];
