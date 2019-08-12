@@ -6,6 +6,7 @@ import {SharedCardsComponent} from './shared-cards/shared-cards.component';
 import {SettingsComponent} from './settings/settings.component';
 import {HelpComponent} from './help/help.component';
 import {CollectionComponent} from './collection/collection.component';
+import {CardFormComponent} from './card-form/card-form.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'collection', component: CollectionComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'help', component: HelpComponent },
+  { path: 'addcard', component: CardFormComponent},
   { path: '**', redirectTo: '/help', pathMatch: 'full'}
 ];
 

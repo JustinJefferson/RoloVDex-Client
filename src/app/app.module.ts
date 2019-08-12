@@ -11,6 +11,7 @@ import { HelpComponent } from './help/help.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CardComponent } from './card/card.component';
 import { CollectionComponent } from './collection/collection.component';
+import { CardFormComponent } from './card-form/card-form.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CollectionComponent } from './collection/collection.component';
     HelpComponent,
     NavigationComponent,
     CardComponent,
-    CollectionComponent
+    CollectionComponent,
+    CardFormComponent
   ],
   imports: [
     BrowserModule,
