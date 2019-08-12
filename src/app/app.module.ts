@@ -12,6 +12,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { CardComponent } from './card/card.component';
 import { CollectionComponent } from './collection/collection.component';
 import { CardFormComponent } from './card-form/card-form.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CardFormComponent } from './card-form/card-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [

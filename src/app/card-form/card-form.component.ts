@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CardData} from '../card-data';
 
 @Component({
   selector: 'app-card-form',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardFormComponent implements OnInit {
 
+  cardData = new CardData();
+  submitted = false;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  onSubmit() { this.submitted = true; }
 
 }

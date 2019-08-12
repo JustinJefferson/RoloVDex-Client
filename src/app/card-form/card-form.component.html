@@ -1,3 +1,60 @@
 <div class="container">
   <h2 class="text-center">ADD A CARD</h2>
+
+  <div class="card">
+    <div class="card-body">
+      <form #cardForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input name="name" type="text" class="form-control" id="name" placeholder="Your Full Name"
+                 required [(ngModel)]="cardData.name" #name="ngModel">
+          <div [hidden]="name.pristine || name.valid" class="alert alert-danger">Name is required</div>
+          <div>Pristine: {{name.pristine}} | Valid: {{name.valid}} | Touched: {{name.untouched}}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="jobTitle">Job Title</label>
+          <input name="jobTitle" type="text" class="form-control" id="jobTitle" placeholder="Your Job Title"
+                 required [(ngModel)]="cardData.jobTitle" #jobTitle="ngModel">
+          <div [hidden]="jobTitle.pristine || jobTitle.valid" class="alert alert-danger">Job Title is required</div>
+          <div>Pristine: {{jobTitle.pristine}} | Valid: {{jobTitle.valid}} | Touched: {{jobTitle.untouched}}</div>
+        </div>
+
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input name="company" type="text" class="form-control" id="company" placeholder="Your Company's Name"
+                 [(ngModel)]="cardData.company">
+        </div>
+
+        <div class="form-group">
+          <label for="addressLine1">Address Line 1</label>
+          <input name="addressLine1" type="text" class="form-control" id="addressLine1" placeholder="Address Line 1"
+                 required [(ngModel)]="cardData.addressLine1" #addressLine1="ngModel">
+          <div [hidden]="addressLine1.valid || addressLine1.pristine" class="alert alert-danger">This address line is required</div>
+        </div>
+
+        <div class="form-group">
+          <label for="addressLine2">Address Line 2</label>
+          <input name="addressLine2" type="text" class="form-control" id="addressLine2" placeholder="Address Line 2"
+                 [(ngModel)]="cardData.addressLine2">
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <input name="city" type="text" class="form-control" id="city" placeholder="City"
+                 required [(ngModel)]="cardData.city" #city="ngModel">
+          <div [hidden]="city.valid || city.pristine" class="alert alert-danger">City is required</div>
+        </div>
+
+        <div class="form-group">
+          <label for="zipcode">Zipcode</label>
+          <input name="zipcode" type="text" class="form-control" id="zipcode" placeholder="Zipcode"
+                 required [(ngModel)]="cardData.zipcode" #zipcode="ngModel">
+          <div [hidden]="zipcode.valid || zipcode.pristine" class="alert alert-danger">Zipcode is required</div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
