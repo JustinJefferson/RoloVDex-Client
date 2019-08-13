@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CardData} from '../card-data';
+import {CardDataService} from '../card-data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-card-form',
@@ -8,14 +10,30 @@ import {CardData} from '../card-data';
 })
 export class CardFormComponent implements OnInit {
 
-  cardData = new CardData();
+  cardData: CardData;
   submitted = false;
 
-  constructor() { }
+  constructor(private service: CardDataService, private router: Router) {
+    this.cardData = new CardData();
+  }
 
   ngOnInit() {
   }
 
-  onSubmit() { this.submitted = true; }
+  // onSubmit() {
+  //
+  // }
+
+  onSubmit() {
+    this.submitted = true;
+    console.log(this.cardData);
+    this.service.post(this.cardData, 1).subscribe((response: CardData) => {
+      if (response != null) {
+        this.router.navigate(['/profile']);
+      } else {
+        this.router.navigate(['/help']);
+      }
+    });
+  }
 
 }
