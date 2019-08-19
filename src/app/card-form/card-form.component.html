@@ -3,13 +3,13 @@
 
   <div class="card">
     <div class="card-body">
-      <form #cardForm="ngForm">
+      <form (ngSubmit)="onSubmit()" #cardForm="ngForm">
         <div class="form-group">
           <label for="name">Name</label>
           <input name="name" type="text" class="form-control" id="name" placeholder="Your Full Name"
                  required [(ngModel)]="cardData.name" #name="ngModel">
           <div [hidden]="name.pristine || name.valid" class="alert alert-danger">Name is required</div>
-          <div>Pristine: {{name.pristine}} | Valid: {{name.valid}} | Touched: {{name.untouched}}</div>
+<!--          <div>Pristine: {{name.pristine}} | Valid: {{name.valid}} | Touched: {{name.untouched}}</div>-->
         </div>
 
         <div class="form-group">
@@ -17,7 +17,7 @@
           <input name="jobTitle" type="text" class="form-control" id="jobTitle" placeholder="Your Job Title"
                  required [(ngModel)]="cardData.jobTitle" #jobTitle="ngModel">
           <div [hidden]="jobTitle.pristine || jobTitle.valid" class="alert alert-danger">Job Title is required</div>
-          <div>Pristine: {{jobTitle.pristine}} | Valid: {{jobTitle.valid}} | Touched: {{jobTitle.untouched}}</div>
+<!--          <div>Pristine: {{jobTitle.pristine}} | Valid: {{jobTitle.valid}} | Touched: {{jobTitle.untouched}}</div>-->
         </div>
 
         <div class="form-group">
@@ -53,8 +53,12 @@
           <div [hidden]="zipcode.valid || zipcode.pristine" class="alert alert-danger">Zipcode is required</div>
         </div>
 
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" [disabled]="!cardForm.form.valid || submitted">Submit</button>
+<!--        <div>Valid: {{cardForm.form.valid}} | Submitted: {{submitted}}</div>-->
       </form>
+    </div>
+    <div [hidden]="!submitted" class="card-footer">
+      <h4>Generating Card...</h4>
     </div>
   </div>
 </div>
